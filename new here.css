@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.sect1{
+  background-image: linear-gradient(wheat,wheat);
+  overflow: hidden;
+  height: 160vh;
+
+}
+.imgdiv{
+  margin-top: 30px;
+ margin-left: 400px;
+  opacity: 0.5;
+    
+ 
+
+}
+.txt{
+position: absolute;
+font-family: 'Rubik Wet Paint', cursive;
+color: darkslateblue;
+margin-left: 5px;
+
+}
+.field-group{
+width: 600px;
+position: relative;
+padding-top: 15px;
+margin-left: 20px;
+}
+.input-field{
+  width: 400px;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #999999;
+  padding: 5px 0;
+  background: transparent;
+  font-size: 2em;
+  color: darkslateblue;
+  transition: 0.3s ease;
+}
+.input-label{
+  display: block;
+  position: absolute;
+  top: o;
+  font-size: 1em;
+  color: #999999;
+  transition: 0.3s ease;
+
+}
+.input-field::placeholder{
+  color: transparent;
+}
+.input-field:placeholder-shown ~ .input-label{
+  font-size: 2em;
+  top: 20px;
+
+}
+.input-field:focus{
+  border-image: linear-gradient(to right, #ef5a03,#d1d357);
+  border-image-slice: 1;
+}
+.input-field:focus ~ .input-label{
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 1em;
+  color: #ef5a03;
+}
+.btn button{
+  margin-bottom: 210px;
+  color: darkblue;
+  width: 90px;
+  height: 40px;
+  background: linear-gradient(white, white ) padding-box,
+  linear-gradient(to right, #ef5a03,#d1d357) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 10px;
+}

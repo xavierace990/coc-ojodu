@@ -1,0 +1,42 @@
+
+.ul a{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 20px;
+    float: right;
+    font-size: xx-large;
+}
+
+.divwork{
+    display: flex;
+   
+   
+}
+.divwork .btn1{
+    
+    background-image: linear-gradient(rgb(126, 114, 114),rgb(172, 164, 164));
+    color: powderblue;
+    cursor: pointer;
+  
+}
+.div1 input{
+margin-left: 70px;
+width: 600px;
+position: relative;
+
+}
+
+
+.btn1{
+  margin-left: 100px;
+  border-radius: 30px;
+  border: none;
+}
+.div1 .btn1{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    position: relative;
+    margin-right: 30px;
+}
