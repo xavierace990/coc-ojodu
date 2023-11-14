@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,44 +8,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/f3b99b4317.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
 </head>
 <body>
-    <div style="background-image: url('gra.jpg');background-position: center;background-size: cover;background-repeat: no-repeat;" class="offcanvas offcanvas-end" id="carousel">
+    <div style="background-image: linear-gradient(white,skyblue);font-family: 'Roboto Mono', monospace;" class="offcanvas offcanvas-end" id="carousel">
         <!--header-->
         <div class="offcanvas-header ">
-          <img class="offcanvas-title " style="width: 80px;" src="coc-logo.png" alt="">
+          <img class="offcanvas-title " style="width: 80px;" src=" {% static 'coc-logo.png' %}" alt="">
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <!--body-->
         <div class="offcanvas-body p-4  ">
-          <a style="color: black;"  class="text-decoration-none " href="index.html">
+          <a class="text-decoration-none " href="{% url 'index' %}">
             <p>Home</p>
           </a>
-          <a style="color: black;"  class="text-decoration-none  " href="about.html">
+          <a class="text-decoration-none  " href="{% url 'about' %}">
             <p>About</p>
           </a>
-          <a style="color: black;"  class="text-decoration-none" href="contact.html">
+          <a class="text-decoration-none" href="{% url 'feedback' %}">
             <p>Contact Us</p>
           </a>
-          <a style="color: black;"  class="text-decoration-none" href="preacher.html">
+          <a class="text-decoration-none" href="{% url 'preacher' %}">
             <p>Our Preacher</p>
           </a>
-          <a style="color: black;"  class="text-decoration-none" href="teaching1.html">
+          <a class="text-decoration-none" href="{% url 'teaching1' %}">
             <p>Teaching's and Sermon's</p>
           </a>
-          <a style="color: black;"  class="text-decoration-none" href="bulletin.html">
+          <a class="text-decoration-none" href="{% url 'bulletin' %}">
             <p>Bulletin</p>
           </a>
-          <a style="color: black;"  class="text-decoration-none" href="first_timer.html">
+          <a class="text-decoration-none" href="{% url 'first'  %}">
             <p>First Timer</p>
           </a>
         </div>
     
       </div>
-
+      <!--hamburger-menu-->
       <nav class="d-sm-flex p-3 navbar-dark bg-dark ">
         <div class="container">
           <center>
@@ -80,12 +78,9 @@
       </div>
       
     </nav>
-     
-      <!--hamburger-menu-->
-    
       <nav class="navbar navbar-expand-md navbar-dark bg-white ">
         <div class="container-fluid mt-1 ">
-         <a href="index.html"> <img class="img-fluid" style="width: 50px;margin-left: 20px;" src="coc-logo.png" alt=""></a>
+         <a href="{% url 'index' %}"> <img class="img-fluid" style="width: 50px;margin-left: 20px;" src="{% static 'coc-logo.png' %}" alt=""></a>
     
           <div style="background-image: url('');" class=" m-0 text-white">
             <button class="btn btn-secondary mt-3 m-3 " type="button" data-bs-toggle="offcanvas" data-bs-target="#carousel">
@@ -95,7 +90,7 @@
         </div>
       </nav>
     <!-- donation.html -->
-    <section style="background-image: url('church.jpg');background-position: center;background-size: cover;background-repeat: no-repeat;" class="container-fluid ">
+    <section style="background-image: url('../static/church.jpg');background-position: center;background-size: cover;background-repeat: no-repeat;" class="container-fluid ">
       <div class="container-fluid text-center">
           <h2 class="display-4">Support Our Mission</h2>
           <p>
@@ -121,7 +116,7 @@
                       <div class="card-body">
                           <h3 class="card-title">How You Can Help</h3>
                           <p class="card-text">
-                              <i class="fas fa-star"></i> One-Time Giving: Your one-time Giving, no matter the amount, will help us make an immediate impact in our community. Every giving brings us one step closer to achieving our goals.
+                              <i class="fas fa-star"></i> One-Time Donation: Your one-time donation, no matter the amount, will help us make an immediate impact in our community. Every dollar brings us one step closer to achieving our goals.
                           </p>
                           <p class="card-text">
                               <i class="fas fa-star"></i> Monthly Giving: Consider becoming a monthly donor to provide sustained support for our ongoing projects. Monthly contributions add up and empower us to plan for the long term.
@@ -131,78 +126,58 @@
               </div>
           </div>
       </div>
-  
-      <div class="container text-center mt-4 p-5 donate-section">
-        <h4 class="donate-title">Give Here✅</h4>
-        <div class="donate-details">
-            <h2 class="bank-name">Bank Name: First Bank Plc</h2>
-            <h4 class="account-number">Account Number: [Your Account Number]</h4>
+
+
+      <div class="container text-center mt-4 p-5">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Give Here Via Transfer</h3>
+                <p class="card-text">
+                  <h2>Bank Name: First Bank Plc</h2>
+                </p>
+                <p class="card-text">
+                  <h4>Account Number: 2004445801</h4> 
+                </p>
+            </div>
         </div>
     </div>
+</div>
     
   </section>
-  <br>
-
-  <style>
-    .donate-section {
-      background-color: #f2f2f2;
-      padding: 20px;
-      border-radius: 10px;
-  }
   
-  .donate-title {
-      font-size: 24px;
-      color: #FF5733; /* Choose your desired text color */
-      margin-bottom: 20px;
-  }
-  
-  .bank-name {
-      font-size: 20px;
-      font-weight: bold;
-      color: #2E3192; /* Choose your desired text color */
-      margin-top: 10px;
-  }
-  
-  .account-number {
-      font-size: 16px;
-      color: #333; /* Choose your desired text color */
-      margin-top: 5px;
-  }
-  
-  </style>
-    <!-- Footer Section -->
+        <!-- Footer Section -->
 <footer class="footer p-5">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h4>Contact Us</h4>
-            <p><i class="fas fa-map-marker-alt"></i> 9,IGBEHINADUN STREET, OFF ODOZI,OJODU</p>
-            <p><i class="fas fa-phone"></i> Phone: +1 (123) 456-7890</p>
-            <p><i class="fas fa-envelope"></i> Email: churchofchristojodu <br> @gmail.com</p>
-        </div>
-            <div class="col-md-4">
-                <h4>Quick Links</h4>
-                <ul class="list-unstyled text-decoration-none">
-                    <li><a style="color: black;"  class="text-decoration-none" href="index.html">Home</a></li>
-                    <br>
-                    <li><a style="color: black;"  class="text-decoration-none" href="about.html">About Us</a></li>
-                    <br>
-                    <li><a style="color: black;" class="text-decoration-none" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Connect With Us</h4>
-                <p>Stay updated with our latest news and updates:</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 9,IGBEHINADUN STREET, OFF ODOZI,OJODU</p>
+          <p><i class="fas fa-phone"></i> Phone: +1 (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> Email: churchofchristojodu <br> @gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+        <ul class="list-unstyled text-decoration-none">
+            <li><a style="color: black;" class="text-decoration-none" href="{% url 'index' %}">Home</a></li>
+            <br>
+            <li><a style="color: black;" class="text-decoration-none" href="{% url 'about' %}">About Us</a></li>
+            <br>
+            <li><a style="color: black;" class="text-decoration-none" href="{% url 'feedback' %}">Contact</a></li>
+        </ul>
     </div>
+          <div class="col-md-4">
+              <h4>Connect With Us</h4>
+              <p>Stay updated with our latest news and updates:</p>
+              <div class="social-icons">
+                  <a href="#"><i style="font-size: xx-large;" class="fab fa-facebook"></i></a>
+                  <a href="#"><i style="font-size: xx-large;color: red;" class="fab fa-instagram"></i></a>
+                  <a href=""><i style="font-size: xx-large;color: red;" class="fa-brands fa-youtube"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
 </footer>
 <!-- End Footer Section -->
-
 
 </body>
 </html>

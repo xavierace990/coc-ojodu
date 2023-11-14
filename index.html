@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,7 @@
   
   
   
-  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="{%  static 'blog.css' %}">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     }
 
     .background-section {
-      background-image: url('believe.jpg');
+      background-image: url('../static/believe.jpg');
       background-position: center;
       background-size: cover;
     }
@@ -51,30 +51,30 @@
   <div style="background-image: linear-gradient(#C0B77E,#917A58,#2A261B);font-family: 'Roboto Mono', monospace;" class="offcanvas offcanvas-end" id="carousel">
     <!--header-->
     <div class="offcanvas-header ">
-      <img class="offcanvas-title " style="width: 80px;" src="coc-logo.png" alt="">
+      <img class="offcanvas-title " style="width: 80px;" src="{% static 'coc-logo.png' %}" alt="">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
     <!--body-->
     <div class="offcanvas-body p-4  ">
-      <a style="color: white;" class="text-decoration-none " href="index.html">
+      <a style="color: white;" class="text-decoration-none " href="{% url 'index' %}">
         <p>Home</p>
       </a>
-      <a style="color: white;"  class="text-decoration-none  " href="about.html">
+      <a style="color: white;"  class="text-decoration-none  " href="{% url 'about' %}">
         <p>About</p>
       </a>
-      <a  style="color: white;" class="text-decoration-none" href="contact.html">
+      <a  style="color: white;" class="text-decoration-none" href="{% url 'feedback' %}">
         <p>Contact Us</p>
       </a>
-      <a style="color: white;"  class="text-decoration-none" href="preacher.html">
+      <a style="color: white;"  class="text-decoration-none" href="{% url 'preacher' %}">
         <p>Our Preacher</p>
       </a>
-      <a style="color: white;"  class="text-decoration-none" href="teaching1.html">
+      <a style="color: white;"  class="text-decoration-none" href="{% url 'teaching1' %}">
         <p>Teaching's and Sermon's</p>
       </a>
-      <a style="color: white;"  class="text-decoration-none" href="bulletin.html">
+      <a style="color: white;"  class="text-decoration-none" href="{% url 'bulletin' %}">
         <p>Bulletin</p>
       </a>
-      <a style="color: white;" class="text-decoration-none" href="first.html">
+      <a style="color: white;" class="text-decoration-none" href="{% url 'first' %}">
         <p>First Timer</p>
       </a>
     </div>
@@ -117,7 +117,7 @@
 </nav>
   <nav class="navbar navbar-expand-md navbar-dark bg-white ">
     <div class="container-fluid mt-1 ">
-     <a href="index.html"> <img class="img-fluid" style="width: 50px;margin-left: 20px;" src="coc-logo.png" alt=""></a>
+     <a href="{% url 'index' %}"> <img class="img-fluid" style="width: 50px;margin-left: 20px;" src="{% static 'coc-logo.png' %}" alt=""></a>
 
       <div style="background-image: url('');" class=" m-0 text-white">
         <button class="btn btn-secondary mt-3 m-3 " type="button" data-bs-toggle="offcanvas" data-bs-target="#carousel">
@@ -133,7 +133,7 @@
       <center>
         <div class="container">
           <br>
-          <img class="img-fluid" style="width: 80px;" src="heaven.png" alt="">
+          <img class="img-fluid" style="width: 80px;" src="{% static 'heaven.png' %}" alt="">
           <h1 style="font-size: 70px;font-family: 'Oswald', sans-serif;">WE HOPE IN GOD</h1>
         </div>
       </center>
@@ -156,7 +156,7 @@
           <center>
             <h3 style="font-family: 'Oswald', sans-serif;">LIVE STREAM WITH US </h3>
             <a href=""><img class="img-fluid" alt="Responsive Image"
-                style="border-radius: 30px;width: 240px;" src="connect-removebg.png" alt=""></a>
+                style="border-radius: 30px;width: 240px;" src="{% static 'connect-removebg.png' %}" alt=""></a>
             <br>
             <br>
             <button class="btn btn-outline-danger">Live Stream</button>
@@ -169,12 +169,12 @@
           <center>
             <h3 style="font-family: 'Oswald', sans-serif;">OUR MINISTRIES</h3>
             <a href=""><img class="img-fluid" alt="Responsive Image"
-                style="border-radius: 30px;margin-top: 10px;width: 140px;" src="3d-bible-rem.png" alt="">
+                style="border-radius: 30px;margin-top: 10px;width: 140px;" src="{% static '3d-bible-rem.png' %}" alt="">
             </a>
             <br>
             <br>
             <center>
-              <a href="ourministries.html"><button class="btn btn-outline-danger">Read More</button></a>
+              <a href="{% url 'ourministries' %}"><button class="btn btn-outline-danger">Read More</button></a>
             </center>
           </center>
         </div>
@@ -185,12 +185,12 @@
             <center>
               <h3 style="font-family: 'Oswald', sans-serif;">GIVING</h3>
               <a href=""><img class="img-fluid" alt="Responsive Image"
-                  style="border-radius: 30px;width: 194px;" src="donate-remove.png" alt="">
+                  style="border-radius: 30px;width: 194px;" src="{% static 'dnb.png' %}" alt="">
               </a>
               <br>
               <br>
               <center>
-                <a href=" donate"><button class="btn btn-outline-danger">Give Now</button></a>
+                <a href=" {% url 'donate' %}"><button class="btn btn-outline-danger">Give Now</button></a>
               </center>
             </center>
           </div>
@@ -202,14 +202,14 @@
     </section>
 
     <section
-      style="background-image: url('praying-hands.webp');background-position: center;background-size: cover;color: white;" class="p-5 img-fluid">
+      style="background-image: url('../static/praying-hands.webp');background-position: center;background-size: cover;color: white;" class="p-5 img-fluid">
       <div class="container p-2">
     
         
         <h2 style="font-size: 50px;font-family: 'Oswald', sans-serif;">Can't make it in- <br> person? Join Us <br>
           Online</h2>
         <br>
-        <a href="feedback.html"><button class="btn btn-success ">Contact Us</button></a>
+        <a href="{% url 'feedback' %}"><button class="btn btn-success ">Contact Us</button></a>
       </div>
     </section>
 
@@ -237,7 +237,7 @@
           <!-- The slideshow/carousel -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="IMG_E0192.JPG" alt="Los Angeles" class="d-block" style="width:100%">
+              <img src="{% static 'IMG_E0192.JPG' %}" alt="Los Angeles" class="d-block" style="width:100%">
               <div style="padding: 10px;color: lightcyan;border-radius: 10px;font-weight: 500;"
                 class="carousel-caption">
                 <h3>Bro. solomon Ita</h3>
@@ -246,7 +246,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="IMG_E0190.JPG" alt="Chicago" class="d-block" style="width:100%">
+              <img src="{% static 'IMG_E0190.JPG' %}" alt="Chicago" class="d-block" style="width:100%">
               <div style="padding: 10px;color: lightcyan;border-radius: 10px;font-weight: 500;"
                 class="carousel-caption">
                 <h3>Bro. Isaiah Udo</h3>
@@ -254,7 +254,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="IMG_E0194.JPG" alt="New York" class="d-block" style="width:100%">
+              <img src="{% static 'IMG_E0194.JPG' %}" alt="New York" class="d-block" style="width:100%">
               <div style="padding: 10px;color: lightcyan;border-radius: 10px;font-weight: 500;"
                 class="carousel-caption">
                 <h3>Bro. Marvelous Iyang</h3>
@@ -262,7 +262,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="IMG_E0196.JPG" alt="New York" class="d-block" style="width:100%">
+              <img src="{% static 'IMG_E0196.JPG'%}" alt="New York" class="d-block" style="width:100%">
               <div style="padding: 10px;color: lightcyan;border-radius: 10px;font-weight: 500;"
                 class="carousel-caption">
                 <h3>Sis. whitney Abandy </h3>
@@ -270,7 +270,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="IMG_E0199.JPG" alt="New York" class="d-block" style="width:100%">
+              <img src="{% static 'IMG_E0199.JPG' %}" alt="New York" class="d-block" style="width:100%">
               <div style="padding: 10px;color: lightcyan;border-radius: 10px;font-weight: 500;"
                 class="carousel-caption">
                 <h3>Sis Jayne Johnson</h3>
@@ -279,7 +279,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="IMG_E0201.JPG" alt="New York" class="d-block" style="width:100%">
+              <img src="{% static 'IMG_E0201.JPG' %}" alt="New York" class="d-block" style="width:100%">
               <div style="padding: 10px;color: lightcyan;border-radius: 10px;font-weight: 500;"
                 class="carousel-caption">
                 <h3>Bro. Williams Adeogun</h3>
@@ -330,7 +330,7 @@
           <div class="d-sm-flex  mt-2 container p-3">
             <div class="container">
               <center>
-                <img class="img-fluid" alt="Responsive Image" style="width: 100px;" src="coc-logo.png" alt="">
+                <img class="img-fluid" alt="Responsive Image" style="width: 100px;" src="{% static 'coc-logo.png' %}" alt="">
                 <p style="font-family: 'Roboto Mono', monospace;">Church of Christ is a lovely place to learn the Bible from, filled with aspiring Christians.</p>
               </center>
             </div>
@@ -352,11 +352,11 @@
                 </center>
                 <br>
                 <ul class="list-unstyled text-decoration-none text-center">
-                    <li><a style="color: white;" class="text-decoration-none" href="index.html">Home</a></li>
+                    <li><a style="color: white;" class="text-decoration-none" href="{% url 'index' %}">Home</a></li>
                     <br>
-                    <li><a style="color: white;" class="text-decoration-none" href="about.html">About Us</a></li>
+                    <li><a style="color: white;" class="text-decoration-none" href="{% url 'about' %}">About Us</a></li>
                     <br>
-                    <li><a style="color: white;" class="text-decoration-none" href="feedback.html">Contact</a></li>
+                    <li><a style="color: white;" class="text-decoration-none" href="{% url 'feedback' %}">Contact</a></li>
                 </ul>
             </div>
           </div>
