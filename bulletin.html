@@ -50,51 +50,80 @@
 
   </div>
   <!--hamburger-menu-->
-  <nav class="d-sm-flex p-3 navbar-dark bg-dark ">
-    <div class="container">
-      <center>
-        <span style="font-size: 12px;color: white;" class="" href="#">Opening Hours - 09 : 00AM Every Sunday <span>|</span></span>
-       <!-- Search input with search icon -->
-     
-        <div>
-          <a  class=" " href=""><button style="font-size: 12px;" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i></button></a>
-
-          <a  class=" " href=""><button style="font-size: 12px;" class="btn btn-outline-danger"><i class="fa-brands fa-instagram"></i></button></a>
-
-          <a  class=" " href=""><button style="font-size: 12px;" class="btn btn-outline-danger"><i class="fa-brands fa-youtube"></i></button></a>
-     
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            
-        </button>
-         </div>
-        </center>
-      
+  <!-- Offcanvas navigation menu -->
+       <div  class="offcanvas offcanvas-end" id="carousel">
+        <!-- Header -->
+        <div class="offcanvas-header  text-white">
+            <img class="offcanvas-title" style="width: 80px;" src="coc-logo.png" alt="">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <!-- Body -->
+        <div style="font-family: 'Roboto Mono', monospace;" class="offcanvas-body p-4">
+            <!-- Navigation Links -->
+            <a  class="text-decoration-none " href="index.html">
+                <p>Home</p>
+            </a>
+            <a class="text-decoration-none" href="about.html"><p>About</p></a>
+            <a class="text-decoration-none" href="feedback.html"><p>Contact Us</p></a>
+            <a class="text-decoration-none" href="preacher.html"><p>Our Preacher</p></a>
+            <a class="text-decoration-none" href="teaching1.html"><p>Teaching's and Sermon's</p></a>
+            <a class="text-decoration-none" href="bulletin.html">
+              <p>Bulletin</p>
+            </a>
+            <a class="text-decoration-none" href="first.html">
+                <p>First Timer</p>
+              </a>
+            <!-- Add more navigation links as needed -->
+        </div>
     </div>
-    <div class="container-fluid d-none d-sm-block">
-      <center>
-          <a style="color: white;" class="text-decoration-none" href=""><button style="font-size: 12px;" class="btn btn-outline-secondary"><i class="fa-regular fa-envelope"></i></button> <span style="font-size: 12px;">churchofchristojodu@gmail.com</span></a>
-      </center>
-  </div>
-  
-  <div class="container-fluid d-none d-sm-block">
-      <center>
-          <a style="color: white;" class="text-decoration-none" href=""><button style="font-size: 12px;" class="btn btn-outline-primary"><i class="fa-solid fa-phone"></i></button> <span style="font-size: 12px;">Phone: +1 (123) 456-7890</span></a>
-      </center>
-  </div>
-  
-</nav>
-  <nav class="navbar navbar-expand-md navbar-dark bg-white ">
-    <div class="container-fluid mt-1 ">
-     <a href="index.html"> <img class="img-fluid" style="width: 50px;margin-left: 20px;" src="coc-logo.png" alt=""></a>
-
-      <div style="background-image: url('');" class=" m-0 text-white">
-        <button class="btn btn-secondary mt-3 m-3 " type="button" data-bs-toggle="offcanvas" data-bs-target="#carousel">
-          <i class="fa-solid fa-bars fa-fade"></i>
-        </button>
+    <nav class="d-sm-flex p-3 navbar-dark bg-dark ">
+        <div class="container">
+          <center>
+            <span style="font-size: 12px;color: white;" class="" href="#">Opening Hours - 09 : 00AM Every Sunday <span>|</span></span>
+           <!-- Search input with search icon -->
+         
+            <div>
+              <a  class="" href="https://www.facebook.com/profile.php?id=61553202030922"><button style="font-size: 12px;" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i></button></a>
+    
+              <a  class=" " href=""><button style="font-size: 12px;" class="btn btn-outline-danger"><i class="fa-brands fa-instagram"></i></button></a>
+    
+              <a  class=" " href=""><button style="font-size: 12px;" class="btn btn-outline-danger"><i class="fa-brands fa-youtube"></i></button></a>
+         
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                
+            </button>
+             </div>
+            </center>
+          
+        </div>
+        <div class="container-fluid d-none d-sm-block">
+          <center>
+              <a style="color: white;" class="text-decoration-none" href=""><button style="font-size: 12px;" class="btn btn-outline-secondary"><i class="fa-regular fa-envelope"></i></button> <span style="font-size: 12px;">churchofchristojodu@gmail.com</span></a>
+          </center>
       </div>
-    </div>
-  </nav>
+      
+      <div class="container-fluid d-none d-sm-block">
+          <center>
+              <a style="color: white;" class="text-decoration-none" href=""><button style="font-size: 12px;" class="btn btn-outline-primary"><i class="fa-solid fa-phone"></i></button> <span style="font-size: 12px;">Phone: +1 (123) 456-7890</span></a>
+          </center>
+      </div>
+      
+    </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark ">
+        <div class="container-fluid mt-1">
+            <a href="index.html">
+                <img class="img-fluid" style="width: 50px;margin-left: 20px;" src="coc-logo.png" alt="">
+            </a>
+            <div class="m-0 text-white">
+                <button class="btn btn-secondary mt-3 m-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#carousel">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
     <section style="background-image: linear-gradient(skyblue,rgb(241, 216, 216));background-repeat: repeat;background-position: center;background-size: cover;"  class="container-fluid  p-5">
         <section style="color: white;">
           <h1 class="text-center">Church Bulletin</h1>
@@ -104,7 +133,7 @@
                 <center>
                   <h3 style="font-family: 'Oswald', sans-serif;">January Bulletin </h3>
                   <br>
-                  <a href="{% url 'jan' %}"><button class="btn btn-outline-light">View</button></a>
+                  <a href="january.html"><button class="btn btn-outline-light">View</button></a>
                   <a href="{% url 'generate_pdf' %}"><button class="btn btn-outline-light">Download</button></a>
                 </center>
               </div>
@@ -114,7 +143,7 @@
                   <h3 style="font-family: 'Oswald', sans-serif;">February Bulletin</h3>
                   <br>
                   <center>
-                    <a href="{% url 'feb' %}"><button class="btn btn-outline-light">View</button></a>
+                    <a href="february.html"><button class="btn btn-outline-light">View</button></a>
                     <a href="{% url 'february' %}"><button class="btn btn-outline-light">Download</button></a>
                   </center>
                 </center>
@@ -125,7 +154,7 @@
                     <h3 style="font-family: 'Oswald', sans-serif;">March Bulletin</h3>
                     <br>
                     <center>
-                      <a href="{% url 'mar' %}"><button class="btn btn-outline-light">View</button></a>
+                      <a href="march.html"><button class="btn btn-outline-light">View</button></a>
                       <a href="{% url 'march' %} "><button class="btn btn-outline-light">Download</button></a>
                     </center>
                   </center>
@@ -143,7 +172,7 @@
                 <center>
                   <h3 style="font-family: 'Oswald', sans-serif;">April Bulletin </h3>
                   <br>
-                  <a href="{% url 'apr' %}"><button class="btn btn-outline-light">View</button></a>
+                  <a href="april.html"><button class="btn btn-outline-light">View</button></a>
                   <a href="{% url 'april' %}"><button class="btn btn-outline-light">Download</button></a>
                 </center>
               </div>
@@ -153,7 +182,7 @@
                   <h3 style="font-family: 'Oswald', sans-serif;">May Bulletin</h3>
                   <br>
                   <center>
-                    <a href="{% url 'may_b' %}"><button class="btn btn-outline-light">View</button></a>
+                    <a href="may.html"><button class="btn btn-outline-light">View</button></a>
                     <a href="{% url 'may' %}"><button class="btn btn-outline-light">Download</button></a>
                   </center>
                 </center>
@@ -164,7 +193,7 @@
                     <h3 style="font-family: 'Oswald', sans-serif;">June Bulletin</h3>
                     <br>
                     <center>
-                      <a href="{% url 'jun' %}"><button class="btn btn-outline-light">View</button></a>
+                      <a href="june.html"><button class="btn btn-outline-light">View</button></a>
                       <a href="{% url 'june' %} "><button class="btn btn-outline-light">Download</button></a>
                     </center>
                   </center>
@@ -182,7 +211,7 @@
                 <center>
                   <h3 style="font-family: 'Oswald', sans-serif;">July Bulletin </h3>
                   <br>
-                  <a href="{% url 'jul' %}"><button class="btn btn-outline-light">View</button></a>
+                  <a href="july.html"><button class="btn btn-outline-light">View</button></a>
                   <a href="{% url 'july' %}"><button class="btn btn-outline-light">Download</button></a>
                 </center>
               </div>
@@ -192,7 +221,7 @@
                   <h3 style="font-family: 'Oswald', sans-serif;">August Bulletin</h3>
                   <br>
                   <center>
-                    <a href="{% url 'aug' %}"><button class="btn btn-outline-light">View</button></a>
+                    <a href="august.html"><button class="btn btn-outline-light">View</button></a>
                     <a href="{% url 'august' %}"><button class="btn btn-outline-light">Download</button></a>
                   </center>
                 </center>
@@ -203,7 +232,7 @@
                     <h3 style="font-family: 'Oswald', sans-serif;">September Bulletin</h3>
                     <br>
                     <center>
-                      <a href="{% url 'sep' %}"><button class="btn btn-outline-light">View</button></a>
+                      <a href="september.html"><button class="btn btn-outline-light">View</button></a>
                       <a href=" {% url 'september' %} "><button class="btn btn-outline-light">Download</button></a>
                     </center>
                   </center>
@@ -221,7 +250,7 @@
                 <center>
                   <h3 style="font-family: 'Oswald', sans-serif;">October Bulletin </h3>
                   <br>
-                  <a href="{% url 'oct' %}"><button class="btn btn-outline-light">View</button></a>
+                  <a href="october.html"><button class="btn btn-outline-light">View</button></a>
                   <a href="{% url 'october' %}"><button class="btn btn-outline-light">Download</button></a>
                 </center>
               </div>
@@ -230,7 +259,7 @@
                 <center>
                   <h3 style="font-family: 'Oswald', sans-serif;">November Bulletin</h3>
                   <br>
-                    <a href="{% url 'nov' %}"><button class="btn btn-outline-light">View</button></a>
+                    <a href="november.html"><button class="btn btn-outline-light">View</button></a>
                     <a href="{% url 'november' %}"><button class="btn btn-outline-light">Download</button></a>
                 </center>
               </div>
@@ -240,7 +269,7 @@
                     <h3 style="font-family: 'Oswald', sans-serif;">December Bulletin</h3>
                     <br>
                     <center>
-                      <a href="{% url 'dec' %}"><button class="btn btn-outline-light">View</button></a>
+                      <a href="december.html"><button class="btn btn-outline-light">View</button></a>
                       <a href="  {% url 'december' %} "><button class="btn btn-outline-light">Download</button></a>
                     </center>
                   </center>
@@ -268,11 +297,11 @@
         <div class="col-md-4">
           <h4>Quick Links</h4>
           <ul class="list-unstyled text-decoration-none">
-              <li><a style="color: black;" class="text-decoration-none" href="{% url 'index' %}">Home</a></li>
+              <li><a style="color: black;" class="text-decoration-none" href="index.html">Home</a></li>
               <br>
-              <li><a style="color: black;" class="text-decoration-none" href="{% url 'about' %}">About Us</a></li>
+              <li><a style="color: black;" class="text-decoration-none" href="about.html">About Us</a></li>
               <br>
-              <li><a style="color: black;" class="text-decoration-none" href="{% url 'feedback' %}">Contact</a></li>
+              <li><a style="color: black;" class="text-decoration-none" href="feedback.html">Contact</a></li>
           </ul>
       </div>
             <div class="col-md-4">
